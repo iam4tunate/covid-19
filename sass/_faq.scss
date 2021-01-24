@@ -1,0 +1,91 @@
+.faq {
+    background-color: $color-blue;
+    padding: 8rem 6rem 8rem;
+
+    @media (max-width: $bp-lg) {
+        flex-direction: column;
+        padding: 8rem 4rem 7rem;
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 8rem 2rem 7rem;
+    }
+
+    &>.section__heading {
+        padding-bottom: 4rem;
+        text-align: center;
+    }
+
+    &-grid {
+        @media (max-width: $bp-lg) {
+            flex-direction: column;
+        }
+    }
+
+    &-container {
+        flex-basis: 55%;
+    }
+
+    &-photo {
+        flex-basis: 37%;
+        width: 80%;
+        margin-right: 5rem;
+
+        @media (max-width: $bp-lg) {
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &-icon {
+        height: 3rem;
+        width: 3rem;
+        fill: $color-coral;
+        margin-left: 2rem;
+
+        &:last-child {
+            display: none;
+        }
+
+        @media (max-width: $bp-sm) {
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+
+    &-item {
+        background-color: #fff;
+        color: #111;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+
+        &-header {
+            padding: 2rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: $color-blue;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        &-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            padding: 0 1.5rem;
+
+            &-content {
+                padding: 2rem 1rem;
+                line-height: 2;
+                color: #000;
+                border-top: 1px solid;
+                font-size: 1.5rem;
+                border-image: linear-gradient(to right, transparent, $color-coral, transparent) 1;
+            }
+        }
+    }
+}

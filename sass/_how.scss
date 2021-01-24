@@ -1,0 +1,120 @@
+.how {
+    background-color: $color-blue;
+    padding: 8rem 6rem 8rem;
+
+    @media (max-width: $bp-lg) {
+        padding: 8rem 4rem 7rem;
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 8rem 2rem 7rem;
+    }
+
+    &>.section__heading {
+        padding-bottom: 4rem;
+        text-align: center;
+    }
+
+    &-grid {
+        @media (max-width: $bp-lg) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-photo {
+        flex-basis: 45%;
+
+        @media (max-width: $bp-lg) {
+            flex-basis: 100%;
+            margin-top: 5rem;
+        }
+    }
+
+    &__content {
+        flex-basis: 50%;
+    }
+
+    &__card {
+        position: relative;
+        padding: 2.5rem 2rem;
+        background-color: $color-white;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content 1fr;
+        grid-column-gap: 2rem;
+        grid-row-gap: 1rem;
+        box-shadow: $shadow;
+        border-radius: 15px;
+        overflow: hidden;
+
+        @media (max-width: 450px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content min-content 1fr;
+            padding: 2.5rem 1.5rem;
+        }
+
+        &-bg1 {
+            height: 10rem;
+            width: 10rem;
+            position: absolute;
+            right: -3rem;
+            top: -3rem;
+        }
+
+        &-bg2 {
+            height: 10rem;
+            width: 10rem;
+            position: absolute;
+            // z-index: -1;
+            left: -3rem;
+            bottom: -3rem;
+            // animation: rotate 4s infinite linear;
+
+            @media (max-width: 450px) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            background-color: #FCF8F7;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+
+        &-photo {
+            width: 7rem;
+            grid-column: 1 / 2;
+            grid-row: 1 / -1;
+            z-index: 2;
+
+            @media (max-width: 450px) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                width: 7rem;
+            }
+        }
+
+        &>h5 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+            @media (max-width: 450px) {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+        }
+
+        &>p {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            z-index: 2;
+
+            @media (max-width: 450px) {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
+        }
+    }
+}

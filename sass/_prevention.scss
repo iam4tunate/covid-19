@@ -1,0 +1,73 @@
+.prevention {
+    background-color: $section-bg;
+    padding: 8rem 6rem 8rem;
+
+    @media (max-width: $bp-lg) {
+        padding: 8rem 4rem 7rem;
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 8rem 2rem 7rem;
+    }
+
+    &>.section__heading {
+        padding-bottom: 4rem;
+        text-align: center;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        grid-gap: 6rem;
+
+        @media (max-width: $bp-sm) {
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        background-color: $color-white;
+        position: relative;
+        box-shadow: $shadow;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        overflow: hidden;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &>h6 {
+            font-weight: 500;
+            padding: .8rem 0 .6rem;
+        }
+
+        &-bg {
+            height: 9rem;
+            width: 9rem;
+            position: absolute;
+            right: -3rem;
+            bottom: -3rem;
+
+            @media (max-width: $bp-sm) {
+                height: 7rem;
+                width: 7rem;
+                right: -2rem;
+                top: -2rem;
+            }
+        }
+
+        &-img {
+            width: 8rem;
+            margin-right: 1rem;
+
+            @media (max-width: $bp-sm) {
+                width: 7rem;
+            }
+        }
+    }
+}

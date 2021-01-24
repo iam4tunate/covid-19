@@ -1,0 +1,45 @@
+.about {
+    background-color: $section-bg;
+    padding: 10rem 6rem 8rem;
+
+    @media (max-width: $bp-lg) {
+        flex-direction: column-reverse;
+        padding: 8rem 4rem 7rem;
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 8rem 2rem 7rem;
+    }
+
+    &-btn {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        @media (max-width: $bp-sm) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__content {
+        flex-basis: 60%;
+        padding-left: 5rem;
+
+        @media (max-width: $bp-lg) {
+            flex-basis: 100%;
+            padding-left: 0;
+        }
+
+        &>.section__heading {
+            text-align: left;
+            align-items: flex-start;
+        }
+    }
+
+    &-photo {
+        flex-basis: 40%;
+
+        @media (max-width: $bp-lg) {
+            flex-basis: 100%;
+            margin-top: 5rem;
+        }
+    }
+}

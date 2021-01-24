@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+h5 {
+    font-weight: 600;
+    font-size: 1.9rem;
+    color: $color-blue;
+    text-transform: uppercase;
+
+    @media (max-width: $bp-sm) {
+        font-size: 1.6rem;
+    }
+}
+
+h6 {
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: $color-blue;
+    text-transform: uppercase;
+
+    @media (max-width: $bp-sm) {
+        font-size: 1.6rem;
+    }
+}
+
+p {
+    color: $color-para;
+    font-size: 1.5rem;
+    line-height: 1.9;
+}

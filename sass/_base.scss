@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media (max-width: $bp-md) {
+        font-size: 55%;
+    }
+}
+
+body {
+    font-family: $font-poppins;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    vertical-align: baseline;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
